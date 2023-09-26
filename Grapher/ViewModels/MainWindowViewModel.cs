@@ -11,10 +11,11 @@ public class MainWindowViewModel : ViewModelBase
     {
         var graphPointService = new GraphPointService();
         GraphPointViewModel = new GraphPointViewModel(graphPointService);
+        GraphViewModel = new GraphViewModel();
         
+        GraphViewModel.InitializeGraph();
         GenerateDataCommand = ReactiveCommand.Create(GenerateData);
     }
-    public GraphPointViewModel GraphPointViewModel { get; }
     
     private void GenerateData()
     {
@@ -24,5 +25,8 @@ public class MainWindowViewModel : ViewModelBase
             Console.WriteLine($"X: {point.X}, Y: {point.Y}");
         }
     }
+
     public ReactiveCommand<Unit, Unit> GenerateDataCommand { get; }
+    public GraphPointViewModel GraphPointViewModel { get; }
+    public GraphViewModel GraphViewModel { get; } 
 }

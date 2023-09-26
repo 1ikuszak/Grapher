@@ -134,3 +134,7 @@ D:\code\c#\Grapher\Grapher\obj\Debug\net7.0\Grapher.pdb
 D:\code\c#\Grapher\Grapher\obj\Debug\net7.0\Grapher.csproj.CopyComplete
 D:\code\c#\Grapher\Grapher\obj\Debug\net7.0\Grapher.genruntimeconfig.cache
 D:\code\c#\Grapher\Grapher\obj\Debug\net7.0\ref\Grapher.dll
+D:\code\c#\Grapher\Grapher\bin\Debug\net7.0\LiveChartsCore.dll
+D:\code\c#\Grapher\Grapher\bin\Debug\net7.0\LiveChartsCore.SkiaSharpView.dll
+D:\code\c#\Grapher\Grapher\bin\Debug\net7.0\LiveChartsCore.SkiaSharpView.Avalonia.dll
+D:\code\c#\Grapher\Grapher\bin\Debug\net7.0\SkiaSharp.HarfBuzz.dll

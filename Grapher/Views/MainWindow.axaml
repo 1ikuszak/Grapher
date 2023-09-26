@@ -18,14 +18,14 @@
     <Grid ColumnDefinitions="Auto, *">
         <Grid Grid.Column="0">
             <StackPanel>
-                <views:Table DataContext="{Binding GraphPointViewModel}" />
+                <views:TableView DataContext="{Binding GraphPointViewModel}" />
                 <Button Content="Generate" HorizontalAlignment="Center" Command="{Binding GenerateDataCommand}" />
             </StackPanel>
         </Grid>
         
         <Grid Grid.Column="1">
-            
+            <!-- Include the GraphView control -->
+            <views:GraphView DataContext="{Binding GraphViewModel}" />
         </Grid>
-        
     </Grid>
 </Window>
