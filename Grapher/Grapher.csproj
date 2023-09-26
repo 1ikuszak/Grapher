@@ -25,8 +25,8 @@
 
 
     <ItemGroup>
-      <Compile Update="Controls\Table.axaml.cs">
-        <DependentUpon>TableView.axaml</DependentUpon>
+      <Compile Update="Views\Table.axaml.cs">
+        <DependentUpon>Table.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
     </ItemGroup>
