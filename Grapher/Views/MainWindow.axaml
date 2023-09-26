@@ -1,31 +1,35 @@
-<!-- MainWindow.axaml -->
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="clr-namespace:Grapher.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="clr-namespace:Grapher.Views"
+        xmlns:global="clr-namespace:"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Grapher.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
+        x:DataType="global:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="Grapher">
 
     <Design.DataContext>
-        <vm:MainWindowViewModel/>
+        <global:MainWindowViewModel/>
     </Design.DataContext>
 
     <Grid ColumnDefinitions="Auto, *">
-        <Grid Grid.Column="0">
-            <StackPanel>
+        <Grid Grid.Column="0" RowDefinitions="*, Auto" >
+            <StackPanel Grid.Row="0" Grid.Column="0">
                 <views:TableView DataContext="{Binding GraphPointViewModel}" />
                 <Button Content="Generate" HorizontalAlignment="Center" Command="{Binding GenerateDataCommand}" />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                <Button Content="Line" Command="{Binding ShowLineGraph}"/>
+                <Button Content="Scatter" Command="{Binding ShowScatterGraph}"/>
             </StackPanel>
         </Grid>
         
         <Grid Grid.Column="1">
-            <!-- Include the GraphView control -->
-            <views:LineGraphView DataContext="{Binding LineGraphViewModel}" />
+            <ContentPresenter Content="{Binding ContentToDisplay}"/>
+            <!-- <views:LineGraphView DataContext="{Binding LineGraphViewModel}"/> -->
         </Grid>
     </Grid>
 </Window>
