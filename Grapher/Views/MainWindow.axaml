@@ -25,7 +25,7 @@
         
         <Grid Grid.Column="1">
             <!-- Include the GraphView control -->
-            <views:GraphView DataContext="{Binding GraphViewModel}" />
+            <views:LineGraphView DataContext="{Binding LineGraphViewModel}" />
         </Grid>
     </Grid>
 </Window>

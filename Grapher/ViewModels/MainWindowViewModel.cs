@@ -7,16 +7,17 @@ namespace Grapher.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase
 {
+    
     public MainWindowViewModel()
     {
         var graphPointService = new GraphPointService();
         GraphPointViewModel = new GraphPointViewModel(graphPointService);
-        GraphViewModel = new GraphViewModel();
+        LineGraphViewModel = new LineGraphViewModel();
         
-        GraphViewModel.InitializeGraph();
+        LineGraphViewModel.InitializeGraph();
         GenerateDataCommand = ReactiveCommand.Create(GenerateData);
     }
-    
+
     private void GenerateData()
     {
         Console.WriteLine("Generated Data:");
@@ -24,9 +25,11 @@ public class MainWindowViewModel : ViewModelBase
         {
             Console.WriteLine($"X: {point.X}, Y: {point.Y}");
         }
+        LineGraphViewModel.UpdateGraph(GraphPointViewModel);
     }
 
     public ReactiveCommand<Unit, Unit> GenerateDataCommand { get; }
     public GraphPointViewModel GraphPointViewModel { get; }
-    public GraphViewModel GraphViewModel { get; } 
+    public LineGraphViewModel LineGraphViewModel { get; }
+    
 }

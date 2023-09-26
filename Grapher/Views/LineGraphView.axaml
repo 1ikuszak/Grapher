@@ -6,8 +6,8 @@
              xmlns:viewModels="clr-namespace:Grapher.ViewModels"
              xmlns:avalonia="clr-namespace:LiveChartsCore.SkiaSharpView.Avalonia;assembly=LiveChartsCore.SkiaSharpView.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Grapher.Views.GraphView"
-             x:DataType="viewModels:GraphViewModel">
+             x:Class="Grapher.Views.LineGraphView"
+             x:DataType="viewModels:LineGraphViewModel">
     
     <avalonia:CartesianChart Series="{Binding Series}" />
     

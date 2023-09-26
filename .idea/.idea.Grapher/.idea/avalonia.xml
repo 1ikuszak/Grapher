@@ -7,7 +7,9 @@
         <entry key="Grapher/Controls/Table.axaml" value="Grapher/Grapher.csproj" />
         <entry key="Grapher/Controls/TableView.axaml" value="Grapher/Grapher.csproj" />
         <entry key="Grapher/Views/GraphView.axaml" value="Grapher/Grapher.csproj" />
+        <entry key="Grapher/Views/LineGraphView.axaml" value="Grapher/Grapher.csproj" />
         <entry key="Grapher/Views/MainWindow.axaml" value="Grapher/Grapher.csproj" />
+        <entry key="Grapher/Views/ScatterGraph.axaml" value="Grapher/Grapher.csproj" />
         <entry key="Grapher/Views/Table.axaml" value="Grapher/Grapher.csproj" />
         <entry key="Grapher/Views/TableView.axaml" value="Grapher/Grapher.csproj" />
       </map>

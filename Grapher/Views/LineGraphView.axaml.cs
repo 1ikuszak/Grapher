@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace Grapher.Views;
 
-public partial class GraphView : UserControl
+public partial class LineGraphView : UserControl
 {
-    public GraphView()
+    public LineGraphView()
     {
         InitializeComponent();
     }
