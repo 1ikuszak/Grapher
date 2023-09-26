@@ -3,7 +3,11 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="Grapher/App.axaml" value="Grapher/Grapher.csproj" />
+        <entry key="Grapher/Controls/Table.axaml" value="Grapher/Grapher.csproj" />
+        <entry key="Grapher/Controls/TableView.axaml" value="Grapher/Grapher.csproj" />
         <entry key="Grapher/Views/MainWindow.axaml" value="Grapher/Grapher.csproj" />
+        <entry key="Grapher/Views/TableView.axaml" value="Grapher/Grapher.csproj" />
       </map>
     </option>
   </component>

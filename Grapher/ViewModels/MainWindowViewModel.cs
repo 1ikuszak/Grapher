@@ -1,6 +1,16 @@
-﻿namespace Grapher.ViewModels;
+﻿using System;
+using System.Reactive;
+using ReactiveUI;
 
-public class MainWindowViewModel : ViewModelBase
+namespace Grapher.ViewModels
 {
-    public string Greeting => "Welcome to Avalonia!";
+    public class MainWindowViewModel : ViewModelBase
+    {
+        public MainWindowViewModel()
+        {
+            GraphPointViewModel = new GraphPointViewModel();
+        }
+        
+        public GraphPointViewModel GraphPointViewModel { get; }
+    }
 }

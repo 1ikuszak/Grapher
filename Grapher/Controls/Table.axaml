@@ -1,0 +1,25 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:Grapher.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Grapher.Views.Table"
+             x:DataType="viewModels:GraphPointViewModel">
+    
+    <Design.DataContext>
+        <viewModels:GraphPointViewModel/>
+    </Design.DataContext>
+    
+    <ListBox Name="graphPointListBox" ItemsSource="{Binding Points}">
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Text="{Binding X}" />
+                    <TextBox Text="{Binding Y}" />
+                </StackPanel>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
+    
+</UserControl>

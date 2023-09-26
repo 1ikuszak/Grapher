@@ -2,9 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Grapher.App"
              xmlns:local="using:Grapher"
-             RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
-
+             RequestedThemeVariant="Light">
+    
     <Application.DataTemplates>
         <local:ViewLocator/>
     </Application.DataTemplates>
