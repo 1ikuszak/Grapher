@@ -2,10 +2,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:global="clr-namespace:"
              xmlns:viewModels="clr-namespace:Grapher.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Grapher.Views.ContentPresenterView"
-             x:DataType="viewModels:MainWindowViewModel"
-             Content="{Binding ContentToDisplay}">
+             x:Class="Grapher.Views.GraphTableView"
+             x:DataType="viewModels:GraphTableViewModel">
+    
+    <TreeDataGrid Source="{Binding Source}"/>
+    
 </UserControl>

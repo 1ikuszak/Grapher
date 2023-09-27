@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CyViozKNIPmY7Vfb618GgHykcd0PVOirjPCS/2OOkSZKuKI4ZWORCIGpSnn1eKOnftoBxQ2ddQtQFr6i4KN6IA==",
+  "dgSpecHash": "5DYB3gkQfNcaU++AnyoGgH5dL2zyXOo3tEhMdg6H9VbxgN1Zu1yTDnYPaIjHEdzDEbra2TRXMaTvD4xmcDjD/Q==",
   "success": true,
   "projectFilePath": "D:\\code\\c#\\Grapher\\Grapher\\Grapher.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\48517\\.nuget\\packages\\avalonia.buildservices\\0.0.28\\avalonia.buildservices.0.0.28.nupkg.sha512",
     "C:\\Users\\48517\\.nuget\\packages\\avalonia.controls.colorpicker\\11.0.2\\avalonia.controls.colorpicker.11.0.2.nupkg.sha512",
     "C:\\Users\\48517\\.nuget\\packages\\avalonia.controls.datagrid\\11.0.2\\avalonia.controls.datagrid.11.0.2.nupkg.sha512",
+    "C:\\Users\\48517\\.nuget\\packages\\avalonia.controls.treedatagrid\\11.0.1\\avalonia.controls.treedatagrid.11.0.1.nupkg.sha512",
     "C:\\Users\\48517\\.nuget\\packages\\avalonia.desktop\\11.0.2\\avalonia.desktop.11.0.2.nupkg.sha512",
     "C:\\Users\\48517\\.nuget\\packages\\avalonia.diagnostics\\11.0.2\\avalonia.diagnostics.11.0.2.nupkg.sha512",
     "C:\\Users\\48517\\.nuget\\packages\\avalonia.fonts.inter\\11.0.2\\avalonia.fonts.inter.11.0.2.nupkg.sha512",

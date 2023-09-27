@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Reactive;
 using Grapher.Services;
-using Grapher.ViewModels;
 using ReactiveUI;
+
+namespace Grapher.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase
 {
@@ -12,7 +13,7 @@ public class MainWindowViewModel : ViewModelBase
         GraphPointViewModel = new GraphPointViewModel(graphPointService);
         LineGraphViewModel = new LineGraphViewModel();
         ScatterGraphViewModel = new ScatterGraphViewModel();
-        
+        GraphTableViewModel = new GraphTableViewModel(GraphPointViewModel); // This line is correct
         _contentToDisplay = ScatterGraphViewModel;
         
         GenerateDataCommand = ReactiveCommand.Create(GenerateData);
@@ -27,11 +28,8 @@ public class MainWindowViewModel : ViewModelBase
         {
             Console.WriteLine($"X: {point.X}, Y: {point.Y}");
         }
-
-        if (ContentToDisplay == ScatterGraphViewModel)
-            ScatterGraphViewModel.UpdateGraph(GraphPointViewModel);
-        else
-            LineGraphViewModel.UpdateGraph(GraphPointViewModel);
+        ScatterGraphViewModel.UpdateGraph(GraphPointViewModel);
+        LineGraphViewModel.UpdateGraph(GraphPointViewModel);
     }
 
     public void ShowLineGraph()
@@ -45,6 +43,11 @@ public class MainWindowViewModel : ViewModelBase
         ContentToDisplay = ScatterGraphViewModel;
         GenerateData();
     }
+    
+    public void ShowTableGraph()
+    {
+        ContentToDisplay = GraphTableViewModel;
+    }
 
     public void Randomize()
     {
@@ -57,6 +60,7 @@ public class MainWindowViewModel : ViewModelBase
     public GraphPointViewModel GraphPointViewModel { get; }
     public LineGraphViewModel LineGraphViewModel { get; }
     public ScatterGraphViewModel ScatterGraphViewModel { get; }
+    public GraphTableViewModel GraphTableViewModel { get; }
     private ViewModelBase _contentToDisplay;
     public ViewModelBase ContentToDisplay
     {

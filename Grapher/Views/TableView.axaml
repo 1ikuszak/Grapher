@@ -7,7 +7,7 @@
              x:Class="Grapher.Views.TableView"
              x:DataType="viewModels:GraphPointViewModel">
 
-    <ListBox Name="graphPointListBox" ItemsSource="{Binding Points}">
+    <ListBox Name="graphPointListBox" ItemsSource="{Binding Points}" Background="White">
         <ListBox.ItemTemplate>
             <DataTemplate>
                 <StackPanel Orientation="Horizontal">

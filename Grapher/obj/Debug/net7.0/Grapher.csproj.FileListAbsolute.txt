@@ -138,3 +138,4 @@ D:\code\c#\Grapher\Grapher\bin\Debug\net7.0\LiveChartsCore.dll
 D:\code\c#\Grapher\Grapher\bin\Debug\net7.0\LiveChartsCore.SkiaSharpView.dll
 D:\code\c#\Grapher\Grapher\bin\Debug\net7.0\LiveChartsCore.SkiaSharpView.Avalonia.dll
 D:\code\c#\Grapher\Grapher\bin\Debug\net7.0\SkiaSharp.HarfBuzz.dll
+D:\code\c#\Grapher\Grapher\bin\Debug\net7.0\Avalonia.Controls.TreeDataGrid.dll
