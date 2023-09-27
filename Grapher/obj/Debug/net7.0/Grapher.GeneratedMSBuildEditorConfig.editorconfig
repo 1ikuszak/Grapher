@@ -18,6 +18,9 @@ build_property.ProjectDir = D:\code\c#\Grapher\Grapher\
 [D:/code/c\#/Grapher/Grapher/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[D:/code/c\#/Grapher/Grapher/Views/ContentPresenterView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [D:/code/c\#/Grapher/Grapher/Views/LineGraphView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

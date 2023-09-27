@@ -9,6 +9,7 @@
              x:Class="Grapher.Views.LineGraphView"
              x:DataType="viewModels:LineGraphViewModel">
     
-    <avalonia:CartesianChart Series="{Binding Series}" />
+    <avalonia:CartesianChart Series="{Binding Series}"
+                             ZoomMode="X"/>
     
 </UserControl>

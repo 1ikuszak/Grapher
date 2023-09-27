@@ -8,5 +8,6 @@
              x:Class="Grapher.Views.ScatterGraphView"
              x:DataType="viewModels:ScatterGraphViewModel">
     
-        <avalonia:CartesianChart Series="{Binding Series }" />
+        <avalonia:CartesianChart Series="{Binding Series }"
+                                 ZoomMode="X"/>
 </UserControl>

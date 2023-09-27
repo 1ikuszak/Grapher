@@ -12,20 +12,12 @@ public class MainWindowViewModel : ViewModelBase
         GraphPointViewModel = new GraphPointViewModel(graphPointService);
         LineGraphViewModel = new LineGraphViewModel();
         ScatterGraphViewModel = new ScatterGraphViewModel();
-
-        LineGraphViewModel.InitializeGraph();
-        ScatterGraphViewModel.InitializeGraph();
-
+        
+        _contentToDisplay = ScatterGraphViewModel;
+        
         GenerateDataCommand = ReactiveCommand.Create(GenerateData);
-
-        _contentToDisplay = LineGraphViewModel;
-    }
-
-    private ViewModelBase _contentToDisplay;
-    public ViewModelBase ContentToDisplay
-    {
-        get => _contentToDisplay;
-        set => this.RaiseAndSetIfChanged(ref _contentToDisplay, value);
+        RandomizeCommand = ReactiveCommand.Create(Randomize);
+        GenerateData();
     }
 
     private void GenerateData()
@@ -35,30 +27,40 @@ public class MainWindowViewModel : ViewModelBase
         {
             Console.WriteLine($"X: {point.X}, Y: {point.Y}");
         }
+
         if (ContentToDisplay == ScatterGraphViewModel)
             ScatterGraphViewModel.UpdateGraph(GraphPointViewModel);
         else
-        {
             LineGraphViewModel.UpdateGraph(GraphPointViewModel);
-        }
     }
 
     public void ShowLineGraph()
     {
         ContentToDisplay = LineGraphViewModel;
-        LineGraphViewModel.InitializeGraph();
-        Console.WriteLine("Line");
+        GenerateData();
     }
 
     public void ShowScatterGraph()
     {
         ContentToDisplay = ScatterGraphViewModel;
-        ScatterGraphViewModel.InitializeGraph();
-        Console.WriteLine("Scatter");
+        GenerateData();
     }
 
+    public void Randomize()
+    {
+        ScatterGraphViewModel.RandomizeGraph();
+        LineGraphViewModel.RandomizeGraph();
+    }
+
+    public ReactiveCommand<Unit, Unit> RandomizeCommand { get; }
     public ReactiveCommand<Unit, Unit> GenerateDataCommand { get; }
     public GraphPointViewModel GraphPointViewModel { get; }
     public LineGraphViewModel LineGraphViewModel { get; }
     public ScatterGraphViewModel ScatterGraphViewModel { get; }
+    private ViewModelBase _contentToDisplay;
+    public ViewModelBase ContentToDisplay
+    {
+        get => _contentToDisplay;
+        set => this.RaiseAndSetIfChanged(ref _contentToDisplay, value);
+    }
 }

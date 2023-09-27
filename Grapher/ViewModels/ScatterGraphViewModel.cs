@@ -37,8 +37,10 @@ namespace Grapher.ViewModels
             };
 
         
-        public void InitializeGraph()
+        public void RandomizeGraph()
         {
+            _mainChartValues.Clear();
+
             var random = new Random();
             var chartValues = Enumerable.Range(0, 120)
                 .Select(_ => new ObservablePoint(random.NextDouble(), random.NextDouble()))
